@@ -12,7 +12,7 @@ namespace Microsoft.Extensions.Http.Resilience.Routing.Internal;
 /// Defines a strategy for retrieval of route URLs,
 /// used to route one request across a set of different endpoints.
 /// </summary>
-internal abstract class RequestRoutingStrategy : IResettable, IDisposable
+public abstract class RequestRoutingStrategy : IResettable, IDisposable
 {
     protected RequestRoutingStrategy(Randomizer randomizer)
     {

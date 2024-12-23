@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.Http.Resilience.Internal;
 /// This strategy creates a snapshot of <see cref="HttpRequestMessage"/> before executing the hedging to prevent race conditions when cloning and modifying the message at the same time.
 /// This way, all hedged requests will have an unique instance of the message available from snapshot without the need to access the original one for cloning.
 /// </summary>
-internal sealed class RequestMessageSnapshotStrategy : ResilienceStrategy
+public sealed class RequestMessageSnapshotStrategy : ResilienceStrategy
 {
     protected override async ValueTask<Outcome<TResult>> ExecuteCore<TResult, TState>(
         Func<ResilienceContext, TState, ValueTask<Outcome<TResult>>> callback,

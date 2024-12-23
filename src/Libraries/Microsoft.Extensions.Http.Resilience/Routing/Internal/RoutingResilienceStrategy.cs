@@ -13,7 +13,7 @@ namespace Microsoft.Extensions.Http.Resilience.Routing.Internal;
 /// <summary>
 /// Adds routing support to an inner strategy.
 /// </summary>
-internal sealed class RoutingResilienceStrategy : ResilienceStrategy
+public sealed class RoutingResilienceStrategy : ResilienceStrategy
 {
     private readonly Func<RequestRoutingStrategy>? _provider;
 

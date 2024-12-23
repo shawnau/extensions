@@ -10,7 +10,7 @@ using Microsoft.Shared.Pools;
 
 namespace Microsoft.Extensions.Http.Resilience.Internal;
 
-internal sealed class RequestMessageSnapshot : IResettable, IDisposable
+public sealed class RequestMessageSnapshot : IResettable, IDisposable
 {
     private static readonly ObjectPool<RequestMessageSnapshot> _snapshots = PoolFactory.CreateResettingPool<RequestMessageSnapshot>();
 
